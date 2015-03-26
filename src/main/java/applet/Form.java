@@ -25,7 +25,9 @@ import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+
 import javax.swing.SwingUtilities;
+
 import jssc.SerialPort;
 import jssc.SerialPortEvent;
 import jssc.SerialPortEventListener;
@@ -657,7 +659,7 @@ public class Form extends javax.swing.JPanel {
         int x = (getWidth()/2) - dialog.getWidth()/2;
         int y = (getHeight()/2) - dialog.getHeight()/2;
         dialog.setBounds(x, y, dialog.getWidth(), dialog.getHeight());
-        Main.getApplet().setGlassPane(glassPane);
+        MainWindow.getFrame().setGlassPane(glassPane);
         glassPane.setVisible(true);
     }//GEN-LAST:event_jButtonSendHEXActionPerformed
 

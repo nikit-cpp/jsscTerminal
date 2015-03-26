@@ -31,7 +31,7 @@ import javax.swing.UIManager;
  */
 public class Main extends JApplet {
 
-    private static JApplet applet;
+    /*private static JApplet applet;
 
     static JApplet getApplet() {
         return applet;
@@ -52,5 +52,5 @@ public class Main extends JApplet {
         catch (Exception e) {
             //Do nothing
         }
-    }
+    }*/
 }

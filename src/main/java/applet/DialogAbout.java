@@ -48,12 +48,12 @@ public class DialogAbout extends javax.swing.JPanel {
         int x = (parent.getWidth()/2) - getWidth()/2;
         int y = (parent.getHeight()/2) - getHeight()/2;
         setBounds(x, y, getWidth(), getHeight());
-        Main.getApplet().setGlassPane(glassPane);
+        MainWindow.getFrame().setGlassPane(glassPane);
         glassPane.setVisible(true);
     }
 
     private void closeDialog() {
-        Main.getApplet().getGlassPane().setVisible(false);
+    	MainWindow.getFrame().getGlassPane().setVisible(false);
         parent.setControlsFocusable(true);
     }
 

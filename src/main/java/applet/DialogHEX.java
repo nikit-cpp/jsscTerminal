@@ -25,6 +25,7 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
+
 import jssc.SerialPort;
 
 /**
@@ -45,7 +46,7 @@ public class DialogHEX extends javax.swing.JPanel {
     }
 
     private void close() {
-        Main.getApplet().getGlassPane().setVisible(false);
+    	MainWindow.getFrame().getGlassPane().setVisible(false);
         parent.setControlsFocusable(true);
     }
 

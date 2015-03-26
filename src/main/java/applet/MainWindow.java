@@ -5,9 +5,15 @@ import javax.swing.JFrame;
 
 public class MainWindow {
 	
-    public static void main(String[] args) {
+	private static JFrame frame;
+	
+    public static JFrame getFrame() {
+		return frame;
+	}
+
+	public static void main(String[] args) {
     	
-    	JFrame frame = new JFrame();
+    	frame = new JFrame();
     	
         Form form = new Form();
         
