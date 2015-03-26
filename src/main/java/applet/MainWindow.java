@@ -3,7 +3,7 @@ package applet;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
-
+import javax.swing.WindowConstants;
 
 public class MainWindow {
 	
@@ -25,6 +25,9 @@ public class MainWindow {
                     Form form = new Form();
                     frame = new JFrame();
                     frame.add(form);
+                    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                    frame.setSize(500, 500);
+                    
                     frame.setVisible(true);
                 }
             });
