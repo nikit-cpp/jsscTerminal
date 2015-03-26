@@ -1,6 +1,8 @@
 package applet;
 
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
 
 public class MainWindow {
@@ -12,13 +14,23 @@ public class MainWindow {
 	}
 
 	public static void main(String[] args) {
-    	
-    	frame = new JFrame();
-    	
-        Form form = new Form();
-        
-        frame.add(form);
-        
-        frame.setVisible(true);
+		init();
+    }
+	
+    public static void init() {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+            SwingUtilities.invokeAndWait(new Runnable() {
+                public void run() {
+                    Form form = new Form();
+                    frame = new JFrame();
+                    frame.add(form);
+                    frame.setVisible(true);
+                }
+            });
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
