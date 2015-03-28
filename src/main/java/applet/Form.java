@@ -70,7 +70,7 @@ public class Form extends javax.swing.JPanel {
     private boolean updatePortInfo() {
         boolean returnValue = false;
         String info = "";
-        if(!portName.equals("")){
+        if(portName!=null && !portName.equals("")){
             info += (portName + " @ ");
             info += (baudRate + "-");
             info += (dataBits + "-");
@@ -107,7 +107,7 @@ public class Form extends javax.swing.JPanel {
             returnValue = true;
         }
         else {
-            jLabelPortInfo.setText("");
+            jLabelPortInfo.setText("COM ports not found");
             jButtonOpenPort.setEnabled(false);
         }
         return returnValue;
